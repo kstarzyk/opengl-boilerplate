@@ -1,7 +1,7 @@
 # OpenGL-boilerplate
 
 Handy playground for great OpenGl Tutorial (http://www.opengl-tutorial.org).
-Created and tested on MacOS (should also work for any Unix-based distro).
+Created and tested on MacOS (and working only on MacOS at now).
 
 ### Prerequirements
 
