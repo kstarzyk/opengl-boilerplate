@@ -28,6 +28,8 @@ Your file directory should look like this:
 ## Example
 ```bash
   sh create helloopengl 2 # will create directory "helloopengl" with content from tutorial02 and with makefile
+  cd helloppengl && make
+  ./helloopengl
 ```
 
 
