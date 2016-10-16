@@ -23,7 +23,6 @@ Your file directory should look like this:
 ## Usage
 ```bash
   $ sh create <name of new directory> <order number of tutorial to be copied, default: 1>
-  $ sh run <name of the target project>
 ```
 
 ## Example
