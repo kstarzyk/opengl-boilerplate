@@ -23,3 +23,6 @@ cp TemplateMakefile $name/
 sed -e "s/\${TARGET_NAME}/$name/g" $name/TemplateMakefile >> $name/Makefile
 rm $name/TemplateMakefile
 mv $name/*.cpp $name/$name.cpp
+
+sed -e "s@<\(common\)\/\(.*\)>@\"..\/\1\/\2\"@" $name/$name.cpp >> $name/$name.cpp.tmp
+rm $name/$name.cpp && mv $name/$name.cpp.tmp $name/$name.cpp
