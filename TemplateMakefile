@@ -1,0 +1,9 @@
+CXX=g++
+CFLAGS=-I/usr/local/include/ -I/usr/local/include/GLFW/
+LIBS= -lglfw3 -lGLEW -framework OpenGL -framework GLUT
+COMMON= ../common/shader.o ../common/controls.o ../common/objloader.o ../common/texture.o
+
+default:
+	${CXX} -c ${CFLAGS} *.cpp
+	${CXX} ${CFLAGS} ${TARGET_NAME}.o -o ${TARGET_NAME} ${LIBS} ${COMMON}
+	rm ${TARGET_NAME}.o

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+args=( "$@" )
+name=${args[0]}
+if [ ${#args[@]} -eq 1 ];
+then
+  target="tutorial01*"
+else
+  if [ ${#args[1]} -eq 1 ];
+  then
+    args[1]="0${args[1]}"
+    target="tutorial${args[1]}*"
+  else
+    target="tutorial${args[1]}"
+  fi
+fi
+
+echo "Create project $name from $target"
+mkdir $name
+cp -R ../ogl/$target/* $name
+
+cp TemplateMakefile $name/
+sed -e "s/\${TARGET_NAME}/$name/g" $name/TemplateMakefile >> $name/Makefile
+rm $name/TemplateMakefile
+mv $name/*.cpp $name/$name.cpp
